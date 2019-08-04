@@ -14,14 +14,14 @@
         <Rectangle Fill="White" HorizontalAlignment="Left" Height="335" Margin="-1,165,0,0" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="2"/>
         <Label Content="아이콘 설정" HorizontalAlignment="Left" Margin="279,51,0,0" VerticalAlignment="Top" FontSize="40" Height="63" Width="224"/>
         <Label Content="이름" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" FontSize="25" Height="43" Width="60"/>
-        <Label x:Name="iconPathLabel" Content="C:" HorizontalAlignment="Left" Margin="192,244,0,0" VerticalAlignment="Top" FontSize="25" Background="{x:Null}" Foreground="#FF4B7CFF" Width="524" Height="43" MouseLeftButtonDown="IconPathLabel_MouseLeftButtonDown"/>
+        <TextBlock x:Name="iconPathBlock" Text="C:" HorizontalAlignment="Left" Margin="194,249,0,0" VerticalAlignment="Top" FontSize="25" Background="{x:Null}" Foreground="#FF4B7CFF" Width="524" Height="43" MouseLeftButtonDown="IconPathLabel_MouseLeftButtonDown"/>
         <TextBox x:Name="nameBox" HorizontalAlignment="Left" Margin="96,195,0,0" TextWrapping="Wrap" Text="icon" VerticalAlignment="Top" FontSize="25" Foreground="#FF4B7CFF" Width="620" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Height="35"/>
         <Label Content="아이콘 경로" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top" FontSize="25" Height="43" Width="144"/>
         <Label Content="파일 경로" HorizontalAlignment="Left" Margin="10,302,0,0" VerticalAlignment="Top" FontSize="25" Height="43" Width="119"/>
         <Label Content="링크 주소" HorizontalAlignment="Left" Margin="10,358,0,0" VerticalAlignment="Top" FontSize="25" Height="43" Width="119"/>
         <CheckBox x:Name="pathCheckBox" Content="" HorizontalAlignment="Left" Margin="134,317,0,0" VerticalAlignment="Top" Height="15" Width="20"/>
         <CheckBox x:Name="linkCheckBox" Content="" HorizontalAlignment="Left" Margin="134,375,0,0" VerticalAlignment="Top" Height="15" Width="20"/>
-        <Label x:Name="filePathLabel" Content="C:" HorizontalAlignment="Left" Margin="192,302,0,0" VerticalAlignment="Top" FontSize="25" Background="{x:Null}" Foreground="#FF4B7CFF" Width="524" Height="43" Visibility="Hidden"/>
+        <TextBlock x:Name="filePathBlock" Text="C:" HorizontalAlignment="Left" Margin="194,307,0,0" VerticalAlignment="Top" FontSize="25" Background="{x:Null}" Foreground="#FF4B7CFF" Width="524" Height="43" Visibility="Hidden"/>
         <TextBox x:Name="linkBox" HorizontalAlignment="Left" Margin="192,362,0,0" TextWrapping="Wrap" Text="www." VerticalAlignment="Top" FontSize="25" Foreground="#FF4B7CFF" Width="524" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Height="35" Visibility="Hidden"/>
         <Button x:Name="applyButton" Content="적용" HorizontalAlignment="Left" Margin="540,438,0,0" VerticalAlignment="Top" Width="107" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF4B7CFF" FontSize="25" Height="37" MouseLeftButtonDown="ApplyButton_MouseLeftButtonDown"/>
         <Rectangle Fill="#FFEAEAEA" HorizontalAlignment="Left" Height="35" Margin="395,440,0,0" VerticalAlignment="Top" Width="3"/>

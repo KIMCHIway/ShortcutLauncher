@@ -21,15 +21,32 @@ namespace ShortcutLauncher
     public partial class EditWindow : Window
     {
         private bool isFile = false;
+        private int index;
 
-        public EditWindow()
+        public EditWindow(int _index)
         {
             InitializeComponent();
+
+            index = _index;
         }
 
         private void ApplyButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            if (string.IsNullOrWhiteSpace(nameBox.Text) || string.IsNullOrWhiteSpace(iconPathBlock.Text) || (string.IsNullOrWhiteSpace(filePathBlock.Text) && string.IsNullOrWhiteSpace(linkBox.Text)) )
+            {
+                MessageBox.Show("아이콘 정보를 모두 입력하세요", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                if (isFile)
+                {
+                    MainWindow.Add_NewIcon(index, isFile, nameBox.Text, iconPathBlock.Text, filePathBlock.Text);
+                }
+                else
+                {
+                    MainWindow.Add_NewIcon(index, isFile, nameBox.Text, iconPathBlock.Text, linkBox.Text);
+                }
+            }
         }
 
         private void CancelButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -46,7 +63,7 @@ namespace ShortcutLauncher
         {
             isFile = true;
 
-            filePathLabel.Visibility = Visibility.Visible;
+            filePathBlock.Visibility = Visibility.Visible;
 
             linkCheckBox.IsChecked = false;
             linkBox.Visibility = Visibility.Hidden;
@@ -59,7 +76,7 @@ namespace ShortcutLauncher
             linkBox.Visibility = Visibility.Visible;
 
             pathCheckBox.IsChecked = false;
-            filePathLabel.Visibility = Visibility.Hidden;
+            filePathBlock.Visibility = Visibility.Hidden;
         }
 
         private void FilePathLabel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

@@ -31,7 +31,7 @@ namespace ShortcutLauncher
     [Serializable]
     class ValueObject
     {
-        public Enum[] state = Enumerable.Repeat<Enum>(icon.Null, 16).ToArray<Enum>();
+        public Enum[] state = Enumerable.Repeat<Enum>(icon.Null, 16).ToArray();
         public string[] name = new string[16];
         public string[] iconPath = new string[16];
         public string[] filePath = new string[16];
@@ -43,21 +43,40 @@ namespace ShortcutLauncher
 
     public partial class MainWindow : Window
     {
-        ValueObject VO;
+        private ValueObject VO;
 
-        NotifyIcon tray = new NotifyIcon();
+        private NotifyIcon tray = new NotifyIcon();
 
-        bool isMovable = false;
-
-        EditWindow e = new EditWindow();
+        private List<dynamic> iconObject = new List<dynamic>;
+        private void Init_iconObject()
+        {
+            iconObject.Add(icon00);
+            iconObject.Add(icon01);
+            iconObject.Add(icon02);
+            iconObject.Add(icon03);
+            iconObject.Add(icon04);
+            iconObject.Add(icon05);
+            iconObject.Add(icon06);
+            iconObject.Add(icon07);
+            iconObject.Add(icon08);
+            iconObject.Add(icon09);
+            iconObject.Add(icon10);
+            iconObject.Add(icon11);
+            iconObject.Add(icon12);
+            iconObject.Add(icon13);
+            iconObject.Add(icon14);
+            iconObject.Add(icon15);
+        }
+        private bool isMovable = false;
 
 
         public MainWindow()
         {
             InitializeComponent();
+            Init_iconObject();
 
-            //Make_UrlShortcut("naver", "www.naver.com");
 
+            Save_Value();
             //Load_Value();
 
             // Set tray function
@@ -99,26 +118,6 @@ namespace ShortcutLauncher
             {
                 MessageBox.Show(e.Message + "\r Report Error", "Tray Register ERROR");
             }
-
-
-            icon00.Source = new BitmapImage(new Uri(@"C:\Users\ADMIN\Desktop\874964-tropical\png\F3.png", UriKind.RelativeOrAbsolute));
-            icon01.Source = new BitmapImage(new Uri(@"\Resources\plus.png", UriKind.RelativeOrAbsolute));
-            icon02.Source = new BitmapImage(new Uri(@"C:\Users\ADMIN\Desktop\874964-tropical\png\F3.png", UriKind.RelativeOrAbsolute));
-            icon03.Source = new BitmapImage(new Uri(@"C:\Users\ADMIN\Desktop\874964-tropical\png\F3.png", UriKind.RelativeOrAbsolute));
-            icon04.Source = new BitmapImage(new Uri(@"C:\Users\ADMIN\Desktop\874964-tropical\png\F3.png", UriKind.RelativeOrAbsolute));
-            icon05.Source = new BitmapImage(new Uri(@"C:\Users\ADMIN\Desktop\874964-tropical\png\F3.png", UriKind.RelativeOrAbsolute));
-            icon06.Source = new BitmapImage(new Uri(@"C:\Users\ADMIN\Desktop\874964-tropical\png\F3.png", UriKind.RelativeOrAbsolute));
-            icon07.Source = new BitmapImage(new Uri(@"C:\Users\ADMIN\Desktop\874964-tropical\png\F3.png", UriKind.RelativeOrAbsolute));
-            icon08.Source = new BitmapImage(new Uri(@"C:\Users\ADMIN\Desktop\874964-tropical\png\F3.png", UriKind.RelativeOrAbsolute));
-            icon09.Source = new BitmapImage(new Uri(@"C:\Users\ADMIN\Desktop\874964-tropical\png\F3.png", UriKind.RelativeOrAbsolute));
-            icon10.Source = new BitmapImage(new Uri(@"C:\Users\ADMIN\Desktop\874964-tropical\png\F3.png", UriKind.RelativeOrAbsolute));
-            icon11.Source = new BitmapImage(new Uri(@"C:\Users\ADMIN\Desktop\874964-tropical\png\F3.png", UriKind.RelativeOrAbsolute));
-            icon12.Source = new BitmapImage(new Uri(@"C:\Users\ADMIN\Desktop\874964-tropical\png\F3.png", UriKind.RelativeOrAbsolute));
-            icon13.Source = new BitmapImage(new Uri(@"C:\Users\ADMIN\Desktop\874964-tropical\png\F3.png", UriKind.RelativeOrAbsolute));
-            icon14.Source = new BitmapImage(new Uri(@"C:\Users\ADMIN\Desktop\874964-tropical\png\F3.png", UriKind.RelativeOrAbsolute));
-            icon15.Source = new BitmapImage(new Uri(@"C:\Users\ADMIN\Desktop\874964-tropical\png\F3.png", UriKind.RelativeOrAbsolute));
-
-            e.Show();
         }
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
@@ -143,6 +142,21 @@ namespace ShortcutLauncher
             Stream stream = new FileStream("data.dat", FileMode.Create, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, VO);
             stream.Close();
+        }
+
+        private void Refresh_Icon()
+        {
+            for (int i = 0; i < 16; i++)
+            {
+                if ((icon)VO.state[i] == icon.Null)
+                {
+                    iconObject[i] = new BitmapImage(new Uri(@"\Resources\plus.png", UriKind.RelativeOrAbsolute));
+                }
+                else
+                {
+                    iconObject[i] = new BitmapImage(new Uri(VO.iconPath[i], UriKind.RelativeOrAbsolute));
+                }
+            }
         }
 
         private void Move_Position(bool movability)
@@ -172,7 +186,8 @@ namespace ShortcutLauncher
             if ((icon)VO.state[index] == icon.Null)
             {
                 // open edit window
-
+                EditWindow edit = new EditWindow(index);
+                edit.Show();
             }
             else if ((icon)VO.state[index] == icon.File)
             {
@@ -203,11 +218,26 @@ namespace ShortcutLauncher
             Save_Value();
         }
 
-        private void Add_NewIcon()
+        public void Add_NewIcon(int index, bool isFile,string name, string iconPath, string infor)
         {
             // Add new data to VO
+            VO.name[index] = name;
+            VO.iconPath[index] = iconPath;
+
+            if (isFile)
+            {
+                VO.filePath[index] = infor;
+            }
+            else
+            {
+                VO.url[index] = infor;
+            }
 
             // Save data
+            Save_Value();
+
+            // Refresh icon
+            Refresh_Icon();
         }
 
 
@@ -216,168 +246,166 @@ namespace ShortcutLauncher
         /// 
 
 
+        private void Icon00_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Icon_OnClick(0);
+        }
+
         private void Icon01_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Icon_OnClick(1);
         }
 
         private void Icon02_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Icon_OnClick(2);
         }
 
         private void Icon03_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Icon_OnClick(3);
         }
 
         private void Icon04_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Icon_OnClick(4);
         }
 
         private void Icon05_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Icon_OnClick(5);
         }
 
         private void Icon06_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Icon_OnClick(6);
         }
 
         private void Icon07_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Icon_OnClick(7);
         }
 
         private void Icon08_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Icon_OnClick(8);
         }
 
         private void Icon09_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Icon_OnClick(9);
         }
 
         private void Icon10_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Icon_OnClick(10);
         }
 
         private void Icon11_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Icon_OnClick(11);
         }
 
         private void Icon12_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Icon_OnClick(12);
         }
 
         private void Icon13_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Icon_OnClick(13);
         }
 
         private void Icon14_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Icon_OnClick(14);
         }
 
         private void Icon15_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Icon_OnClick(15);
         }
 
-        private void Icon16_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+
+
+        private void Delete00_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Delete_Icon(0);
         }
-
-
-
-
 
         private void Delete01_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Delete_Icon(1);
         }
 
         private void Delete02_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Delete_Icon(2);
         }
 
         private void Delete03_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Delete_Icon(3);
         }
 
         private void Delete04_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Delete_Icon(4);
         }
 
         private void Delete05_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Delete_Icon(5);
         }
 
         private void Delete06_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Delete_Icon(6);
         }
 
         private void Delete07_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Delete_Icon(7);
         }
 
         private void Delete08_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Delete_Icon(8);
         }
 
         private void Delete09_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Delete_Icon(9);
         }
 
         private void Delete10_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Delete_Icon(10);
         }
 
         private void Delete11_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Delete_Icon(11);
         }
 
         private void Delete12_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Delete_Icon(12);
         }
 
         private void Delete13_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Delete_Icon(13);
         }
 
         private void Delete14_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Delete_Icon(14);
         }
 
         private void Delete15_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
-        }
-
-        private void Delete16_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
+            Delete_Icon(15);
         }
     }
 }
