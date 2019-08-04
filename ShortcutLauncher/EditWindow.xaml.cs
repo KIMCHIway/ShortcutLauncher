@@ -40,12 +40,14 @@ namespace ShortcutLauncher
             {
                 if (isFile)
                 {
-                    MainWindow.Add_NewIcon(index, isFile, nameBox.Text, iconPathBlock.Text, filePathBlock.Text);
+                    ((MainWindow)Application.Current.MainWindow).Add_NewIcon(index, isFile, nameBox.Text, iconPathBlock.Text, filePathBlock.Text);
                 }
                 else
                 {
-                    MainWindow.Add_NewIcon(index, isFile, nameBox.Text, iconPathBlock.Text, linkBox.Text);
+                    ((MainWindow)Application.Current.MainWindow).Add_NewIcon(index, isFile, nameBox.Text, iconPathBlock.Text, linkBox.Text);
                 }
+
+                Close();
             }
         }
 
@@ -54,34 +56,46 @@ namespace ShortcutLauncher
             Close();
         }
 
-        private void IconPathLabel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void IconPathBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            string path = GetName_FileExplorer();
 
+            iconPathBlock.Text = path;
         }
 
-        public void Click_PathCheckbox()
+        private void PathCheckBox_Checked(object sender, RoutedEventArgs e)
         {
             isFile = true;
 
             filePathBlock.Visibility = Visibility.Visible;
+            filePathBlock.Text = "C:\\";
+            filePathLine.Visibility = Visibility.Visible;
 
             linkCheckBox.IsChecked = false;
+            linkBox.Text = string.Empty;
             linkBox.Visibility = Visibility.Hidden;
+            linkLine.Visibility = Visibility.Hidden;
         }
 
-        public void Click_LinkCheckbox()
+        private void LinkCheckBox_Checked(object sender, RoutedEventArgs e)
         {
             isFile = false;
 
             linkBox.Visibility = Visibility.Visible;
+            linkBox.Text = "www.";
+            linkLine.Visibility = Visibility.Visible;
 
             pathCheckBox.IsChecked = false;
+            filePathBlock.Text = string.Empty;
             filePathBlock.Visibility = Visibility.Hidden;
+            filePathLine.Visibility = Visibility.Hidden;
         }
 
-        private void FilePathLabel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void FilePathBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            GetName_FileExplorer();
+            string path = GetName_FileExplorer();
+
+            filePathBlock.Text = path;
         }
 
         private string GetName_FileExplorer()
@@ -93,6 +107,5 @@ namespace ShortcutLauncher
             if (result == true) return dig.FileName;
             else return string.Empty;
         }
-
     }
 }

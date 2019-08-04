@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MessageBox = System.Windows.Forms.MessageBox;
+using Label = System.Windows.Controls.Label;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
@@ -43,12 +44,14 @@ namespace ShortcutLauncher
 
     public partial class MainWindow : Window
     {
-        private ValueObject VO;
+        private ValueObject VO = new ValueObject();
 
         private NotifyIcon tray = new NotifyIcon();
 
-        private List<dynamic> iconObject = new List<dynamic>;
-        private void Init_iconObject()
+        private List<Image> iconObject = new List<Image>();
+        private List<Label> NameObject = new List<Label>();
+        private List<Image> DeleteObject = new List<Image>();
+        private void Init_iconObjects()
         {
             iconObject.Add(icon00);
             iconObject.Add(icon01);
@@ -66,18 +69,55 @@ namespace ShortcutLauncher
             iconObject.Add(icon13);
             iconObject.Add(icon14);
             iconObject.Add(icon15);
+
+            NameObject.Add(name00);
+            NameObject.Add(name01);
+            NameObject.Add(name02);
+            NameObject.Add(name03);
+            NameObject.Add(name04);
+            NameObject.Add(name05);
+            NameObject.Add(name06);
+            NameObject.Add(name07);
+            NameObject.Add(name08);
+            NameObject.Add(name09);
+            NameObject.Add(name10);
+            NameObject.Add(name11);
+            NameObject.Add(name12);
+            NameObject.Add(name13);
+            NameObject.Add(name14);
+            NameObject.Add(name15);
+
+            DeleteObject.Add(delete00);
+            DeleteObject.Add(delete01);
+            DeleteObject.Add(delete02);
+            DeleteObject.Add(delete03);
+            DeleteObject.Add(delete04);
+            DeleteObject.Add(delete05);
+            DeleteObject.Add(delete06);
+            DeleteObject.Add(delete07);
+            DeleteObject.Add(delete08);
+            DeleteObject.Add(delete09);
+            DeleteObject.Add(delete10);
+            DeleteObject.Add(delete11);
+            DeleteObject.Add(delete12);
+            DeleteObject.Add(delete13);
+            DeleteObject.Add(delete14);
+            DeleteObject.Add(delete15);
         }
         private bool isMovable = false;
+        private bool isEdit = false;
 
 
         public MainWindow()
         {
             InitializeComponent();
-            Init_iconObject();
+            Init_iconObjects();
+            
+            //Load_Data();
 
+            // Sync position
 
-            Save_Value();
-            //Load_Value();
+            Refresh_Icon();
 
             // Set tray function
             try
@@ -89,20 +129,45 @@ namespace ShortcutLauncher
                 System.Windows.Forms.MenuItem item3 = new System.Windows.Forms.MenuItem();
 
                 item1.Index = 0;
-                item1.Text = "Move Position";
+                item1.Text = "위치 이동";
                 item1.Click += (click, eClick) =>
                 {
-                    if (isMovable == false) item1.Checked = true;
-                    else item1.Checked = false;
+                    if (isMovable == false)
+                    {
+                        isMovable = true;
+                        item1.Checked = true;
+                    }
+                    else
+                    {
+                        isMovable = false;
+                        item1.Checked = false;
+                    }
 
-                    Move_Position(isMovable);
+                    Move_Position();
                 };
 
                 item2.Index = 1;
-                item2.Text = "Add / Delete Icon";
+                item2.Text = "아이콘 추가 / 삭제";
+                item2.Click += (click, eClick) =>
+                {
+                    if (isEdit == false)
+                    {
+                        isEdit = true;
+                        item2.Checked = true;
+
+                        Show_EditIcons();
+                    }
+                    else
+                    {
+                        isEdit = false;
+                        item2.Checked = false;
+
+                        Refresh_Icon();
+                    }
+                };
 
                 item3.Index = 2;
-                item3.Text = "Exit";
+                item3.Text = "종료";
                 item3.Click += (click, eClick) => System.Windows.Application.Current.Shutdown();
 
                 menu.MenuItems.Add(item1);
@@ -112,12 +177,13 @@ namespace ShortcutLauncher
                 tray.Icon = Properties.Resources.cs;
                 tray.Visible = true;
                 tray.ContextMenu = menu;
-                tray.Text = "ShortcutLauncher";
+                tray.Text = "Shortcut Launcher";
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message + "\r Report Error", "Tray Register ERROR");
             }
+
         }
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
@@ -128,7 +194,7 @@ namespace ShortcutLauncher
             if(isMovable) DragMove();
         }
 
-        private void Load_Value()
+        private void Load_Data()
         {
             IFormatter readFormatter = new BinaryFormatter();
             Stream readStream = new FileStream("data.dat", FileMode.Open, FileAccess.Read, FileShare.Read);
@@ -136,7 +202,7 @@ namespace ShortcutLauncher
             readStream.Close();
         }
 
-        private void Save_Value()
+        private void Save_Data()
         {
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream("data.dat", FileMode.Create, FileAccess.Write, FileShare.None);
@@ -148,27 +214,59 @@ namespace ShortcutLauncher
         {
             for (int i = 0; i < 16; i++)
             {
+                // Hide unnecessary icon
+                // Delete icon
+                DeleteObject[i].Visibility = Visibility.Hidden;
                 if ((icon)VO.state[i] == icon.Null)
                 {
-                    iconObject[i] = new BitmapImage(new Uri(@"\Resources\plus.png", UriKind.RelativeOrAbsolute));
+                    // icon
+                    iconObject[i].Visibility = Visibility.Hidden;
+                    // name
+                    NameObject[i].Visibility = Visibility.Hidden;
                 }
+                // Load and Apply icon files
                 else
                 {
-                    iconObject[i] = new BitmapImage(new Uri(VO.iconPath[i], UriKind.RelativeOrAbsolute));
+                    // icon file
+                    iconObject[i].Visibility = Visibility.Visible;
+                    iconObject[i].Source = new BitmapImage(new Uri(VO.iconPath[i], UriKind.RelativeOrAbsolute));
+                    // name
+                    NameObject[i].Visibility = Visibility.Visible;
+                    NameObject[i].Content = VO.name[i];
                 }
+
             }
         }
 
-        private void Move_Position(bool movability)
+        private void Show_EditIcons()
         {
-            if (movability == false)
+            // Show Edit icons
+            for (int i = 0; i < 16; i++)
+            {
+                if ((icon)VO.state[i] == icon.Null)
+                {
+                    // Apply Addition icon
+                    iconObject[i].Visibility = Visibility.Visible;
+                    iconObject[i].Source = new BitmapImage(new Uri(@"\Resources\plus.png", UriKind.RelativeOrAbsolute));
+                }
+                else
+                {
+                    // Delete icons
+                    DeleteObject[i].Visibility = Visibility.Visible;
+                }
+            }
+
+        }
+
+        private void Move_Position()
+        {
+            if (isMovable == true)
             {
                 Border.Visibility = Visibility.Visible;
                 BorderRect1.Visibility = Visibility.Visible;
                 BorderRect2.Visibility = Visibility.Visible;
                 BorderRect3.Visibility = Visibility.Visible;
                 BorderRect4.Visibility = Visibility.Visible;
-                isMovable = true;
             }
             else
             {
@@ -177,7 +275,6 @@ namespace ShortcutLauncher
                 BorderRect2.Visibility = Visibility.Hidden;
                 BorderRect3.Visibility = Visibility.Hidden;
                 BorderRect4.Visibility = Visibility.Hidden;
-                isMovable = false;
             }
         }
 
@@ -214,8 +311,12 @@ namespace ShortcutLauncher
             VO.filePath[index] = null;
             VO.url[index] = null;
 
-            // Save date 
-            Save_Value();
+
+            Save_Data();
+
+            Refresh_Icon();
+
+            Show_EditIcons();
         }
 
         public void Add_NewIcon(int index, bool isFile,string name, string iconPath, string infor)
@@ -226,18 +327,20 @@ namespace ShortcutLauncher
 
             if (isFile)
             {
+                VO.state[index] = icon.File;
                 VO.filePath[index] = infor;
             }
             else
             {
+                VO.state[index] = icon.Link;
                 VO.url[index] = infor;
             }
 
-            // Save data
-            Save_Value();
+            Save_Data();
 
-            // Refresh icon
             Refresh_Icon();
+
+            Show_EditIcons();
         }
 
 

@@ -5,27 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShortcutLauncher"
         mc:Ignorable="d"
-        Title="EditWindow" Height="508.5" Width="800" WindowStyle="None">
-    <Grid Background="#FFEAEAEA">
+        Title="EditWindow" Height="415.5" Width="466" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFF0F0F0" Margin="0,0,2,2">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="359*"/>
-            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Rectangle Fill="White" HorizontalAlignment="Left" Height="335" Margin="-1,165,0,0" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="2"/>
-        <Label Content="아이콘 설정" HorizontalAlignment="Left" Margin="279,51,0,0" VerticalAlignment="Top" FontSize="40" Height="63" Width="224"/>
-        <Label Content="이름" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" FontSize="25" Height="43" Width="60"/>
-        <TextBlock x:Name="iconPathBlock" Text="C:" HorizontalAlignment="Left" Margin="194,249,0,0" VerticalAlignment="Top" FontSize="25" Background="{x:Null}" Foreground="#FF4B7CFF" Width="524" Height="43" MouseLeftButtonDown="IconPathLabel_MouseLeftButtonDown"/>
-        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Margin="96,195,0,0" TextWrapping="Wrap" Text="icon" VerticalAlignment="Top" FontSize="25" Foreground="#FF4B7CFF" Width="620" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Height="35"/>
-        <Label Content="아이콘 경로" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top" FontSize="25" Height="43" Width="144"/>
-        <Label Content="파일 경로" HorizontalAlignment="Left" Margin="10,302,0,0" VerticalAlignment="Top" FontSize="25" Height="43" Width="119"/>
-        <Label Content="링크 주소" HorizontalAlignment="Left" Margin="10,358,0,0" VerticalAlignment="Top" FontSize="25" Height="43" Width="119"/>
-        <CheckBox x:Name="pathCheckBox" Content="" HorizontalAlignment="Left" Margin="134,317,0,0" VerticalAlignment="Top" Height="15" Width="20"/>
-        <CheckBox x:Name="linkCheckBox" Content="" HorizontalAlignment="Left" Margin="134,375,0,0" VerticalAlignment="Top" Height="15" Width="20"/>
-        <TextBlock x:Name="filePathBlock" Text="C:" HorizontalAlignment="Left" Margin="194,307,0,0" VerticalAlignment="Top" FontSize="25" Background="{x:Null}" Foreground="#FF4B7CFF" Width="524" Height="43" Visibility="Hidden"/>
-        <TextBox x:Name="linkBox" HorizontalAlignment="Left" Margin="192,362,0,0" TextWrapping="Wrap" Text="www." VerticalAlignment="Top" FontSize="25" Foreground="#FF4B7CFF" Width="524" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Height="35" Visibility="Hidden"/>
-        <Button x:Name="applyButton" Content="적용" HorizontalAlignment="Left" Margin="540,438,0,0" VerticalAlignment="Top" Width="107" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF4B7CFF" FontSize="25" Height="37" MouseLeftButtonDown="ApplyButton_MouseLeftButtonDown"/>
-        <Rectangle Fill="#FFEAEAEA" HorizontalAlignment="Left" Height="35" Margin="395,440,0,0" VerticalAlignment="Top" Width="3"/>
-        <Button x:Name="cancelButton" Content="취소" HorizontalAlignment="Left" Margin="143,438,0,0" VerticalAlignment="Top" Width="107" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF4B7CFF" FontSize="25" Height="37" MouseLeftButtonDown="CancelButton_MouseLeftButtonDown"/>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="319" Margin="0,88,0,-1" VerticalAlignment="Top" Width="456"/>
+        <Label Content="아이콘 설정" HorizontalAlignment="Left" Margin="110,14,0,0" VerticalAlignment="Top" FontSize="25" Height="63" Width="224" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="이름" HorizontalAlignment="Left" Margin="16,104,0,0" VerticalAlignment="Top" FontSize="10" Height="24" Width="35" VerticalContentAlignment="Center" Foreground="#FF4B7CFF"/>
+        <TextBlock x:Name="iconPathBlock" Text="C:\" Margin="20,187,20,0" VerticalAlignment="Top" FontSize="15" Background="{x:Null}" Foreground="Black" Height="23" MouseLeftButtonDown="IconPathBlock_MouseLeftButtonDown"/>
+        <TextBox x:Name="nameBox" Margin="20,128,20,0" TextWrapping="Wrap" Text="icon" VerticalAlignment="Top" FontSize="15" Foreground="Black" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Height="25" Background="{x:Null}"/>
+        <Label Content="아이콘 경로" HorizontalAlignment="Left" Margin="16,163,0,0" VerticalAlignment="Top" FontSize="10" Height="25" Width="64" VerticalContentAlignment="Center" Foreground="#FF4B7CFF"/>
+        <Label Content="파일 경로" HorizontalAlignment="Left" Margin="16,222,0,0" VerticalAlignment="Top" FontSize="10" Height="23" Width="56" VerticalContentAlignment="Center" Foreground="#FF4B7CFF"/>
+        <Label Content="링크 주소" HorizontalAlignment="Left" Margin="16,279,0,0" VerticalAlignment="Top" FontSize="10" Height="24" Width="58" VerticalContentAlignment="Center" Foreground="#FF4B7CFF"/>
+        <CheckBox x:Name="pathCheckBox" Content="" HorizontalAlignment="Left" Margin="77,227,0,0" VerticalAlignment="Top" Height="15" Width="20" Checked="PathCheckBox_Checked"/>
+        <CheckBox x:Name="linkCheckBox" Content="" HorizontalAlignment="Left" Margin="77,283,0,0" VerticalAlignment="Top" Height="15" Width="20" Checked="LinkCheckBox_Checked"/>
+        <TextBlock x:Name="filePathBlock" Margin="20,245,20,0" VerticalAlignment="Top" FontSize="15" Background="{x:Null}" Foreground="Black" Height="26" Visibility="Hidden"  MouseLeftButtonDown="FilePathBlock_MouseLeftButtonDown"/>
+        <TextBox x:Name="linkBox" Margin="20,303,20,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Foreground="Black" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Height="25" Visibility="Hidden" Background="{x:Null}"/>
+        <Label x:Name="applyButton" Content="적용" HorizontalAlignment="Right" Margin="0,352,50,0" VerticalAlignment="Top" Width="107" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF4B7CFF" FontSize="20" Height="37" MouseLeftButtonDown="ApplyButton_MouseLeftButtonDown" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="cancelButton" Content="취소" HorizontalAlignment="Left" Margin="50,352,0,0" VerticalAlignment="Top" Width="107" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF4B7CFF" FontSize="20" Height="37" MouseLeftButtonDown="CancelButton_MouseLeftButtonDown" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Rectangle Fill="#FF4B7CFF" Height="1" Margin="20,152,20,0" VerticalAlignment="Top"/>
+        <Rectangle Fill="#FF4B7CFF" Height="1" Margin="20,210,20,0" VerticalAlignment="Top"/>
+        <Rectangle x:Name="filePathLine" Fill="#FF4B7CFF" Height="1" Margin="20,270,20,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Rectangle x:Name="linkLine" Fill="#FF4B7CFF" Height="1" Margin="20,327,20,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Rectangle Fill="#FFF0F0F0" Height="30" Margin="227,357,227,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
