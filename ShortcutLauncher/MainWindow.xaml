@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShortcutLauncher"
         mc:Ignorable="d"
-        Title="MainWindow" Height="389.017" Width="324" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="{x:Null}" >
+        Title="MainWindow" Height="389.017" Width="324" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" >
     <Grid Margin="0,0,0,2">
         <Rectangle x:Name="Border" HorizontalAlignment="Left" Height="389" Width="324" Margin="0,-2,0,0" Stroke="White" VerticalAlignment="Top" StrokeThickness="5" Visibility="Hidden"/>
         <Rectangle x:Name="BorderRect1" HorizontalAlignment="Left" Height="15" Width="15" Margin="0,370,0,0" StrokeThickness="5" VerticalAlignment="Top" Fill="White" Visibility="Hidden"/>

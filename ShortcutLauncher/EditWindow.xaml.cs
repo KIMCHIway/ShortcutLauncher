@@ -40,11 +40,11 @@ namespace ShortcutLauncher
             {
                 if (isFile)
                 {
-                    ((MainWindow)Application.Current.MainWindow).Add_NewIcon(index, isFile, nameBox.Text, iconPathBlock.Text, filePathBlock.Text);
+                    ((MainWindow)Application.Current.MainWindow).Add_NewIcon(index, nameBox.Text, iconPathBlock.Text, filePathBlock.Text);
                 }
                 else
                 {
-                    ((MainWindow)Application.Current.MainWindow).Add_NewIcon(index, isFile, nameBox.Text, iconPathBlock.Text, linkBox.Text);
+                    ((MainWindow)Application.Current.MainWindow).Add_NewIcon(index, nameBox.Text, iconPathBlock.Text, linkBox.Text);
                 }
 
                 Close();
