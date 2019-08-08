@@ -28,6 +28,7 @@ namespace ShortcutLauncher
     public class ValueObject
     {
         public bool[] Allocation = new bool[16];
+        public bool[] isFile = new bool[16];
         public string[] name = new string[16];
         public string[] iconPath = new string[16];
         public string[] infor = new string[16];
@@ -250,8 +251,28 @@ namespace ShortcutLauncher
                 else
                 {
                     // icon file
-                    iconObject[i].Visibility = Visibility.Visible;
-                    iconObject[i].Source = new BitmapImage(new Uri(VO.iconPath[i], UriKind.RelativeOrAbsolute));
+                    if (VO.isFile[i] == false || (VO.isFile[i] == true && File.Exists(VO.infor[i])))
+                    {
+                        try
+                        {
+                            iconObject[i].Visibility = Visibility.Visible;
+                            iconObject[i].Source = new BitmapImage(new Uri(VO.iconPath[i], UriKind.RelativeOrAbsolute));
+                        }
+                        catch (FileNotFoundException) // Icon path missing
+                        {
+
+                        }
+                        catch (NotSupportedException) // Wrong type icon found
+                        {
+
+                        }
+                    }
+                    else // File path Missing 
+                    {
+                        iconObject[i].Visibility = Visibility.Visible;
+                        //iconObject[i].Source = new BitmapImage(new Uri(VO.iconPath[i], UriKind.RelativeOrAbsolute));
+                    }
+
                     // name
                     NameObject[i].Visibility = Visibility.Visible;
                     NameObject[i].Content = VO.name[i];
@@ -311,7 +332,14 @@ namespace ShortcutLauncher
         {
             if (VO.Allocation[index] == true)
             {
-                Process.Start(VO.infor[index]);
+                try
+                {
+                    Process.Start(VO.infor[index]);
+                }
+                catch (System.ComponentModel.Win32Exception)
+                {
+                    return;
+                }
             }
             else
             {
@@ -337,10 +365,11 @@ namespace ShortcutLauncher
             Show_EditIcons();
         }
 
-        public void Add_NewIcon(int index, string _name, string _iconPath, string _infor)
+        public void Add_NewIcon(int index, bool _isFile, string _name, string _iconPath, string _infor)
         {
             // Add new data to VO
             VO.Allocation[index] = true;
+            VO.isFile[index] = _isFile;
             VO.name[index] = _name;
             VO.iconPath[index] = _iconPath;
             VO.infor[index] = _infor;
