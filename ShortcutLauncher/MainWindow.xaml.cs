@@ -270,7 +270,7 @@ namespace ShortcutLauncher
                     else // File path Missing 
                     {
                         iconObject[i].Visibility = Visibility.Visible;
-                        //iconObject[i].Source = new BitmapImage(new Uri(VO.iconPath[i], UriKind.RelativeOrAbsolute));
+                        iconObject[i].Source = new BitmapImage(new Uri(@"\Resources\Icon_Error.png", UriKind.RelativeOrAbsolute));
                     }
 
                     // name
@@ -295,7 +295,7 @@ namespace ShortcutLauncher
                 {
                     // Apply Addition icon
                     iconObject[i].Visibility = Visibility.Visible;
-                    iconObject[i].Source = new BitmapImage(new Uri(@"\Resources\plus.png", UriKind.RelativeOrAbsolute));
+                    iconObject[i].Source = new BitmapImage(new Uri(@"\Resources\Icon_Plus.png", UriKind.RelativeOrAbsolute));
                 }
             }
 
