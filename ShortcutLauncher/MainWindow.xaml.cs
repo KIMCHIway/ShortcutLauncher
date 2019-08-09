@@ -257,25 +257,27 @@ namespace ShortcutLauncher
                         {
                             iconObject[i].Visibility = Visibility.Visible;
                             iconObject[i].Source = new BitmapImage(new Uri(VO.iconPath[i], UriKind.RelativeOrAbsolute));
-                        }
-                        catch (FileNotFoundException) // Icon path missing
-                        {
 
+                            NameObject[i].Visibility = Visibility.Visible;
+                            NameObject[i].Content = VO.name[i];
                         }
-                        catch (NotSupportedException) // Wrong type icon found
+                        catch (FileNotFoundException) // Icon file path missing
                         {
+                            iconObject[i].Visibility = Visibility.Visible;
+                            iconObject[i].Source = new BitmapImage(new Uri(@"\Resources\Icon_Error.png", UriKind.RelativeOrAbsolute));
 
+                            NameObject[i].Visibility = Visibility.Visible;
+                            NameObject[i].Content = "IconFilePathMissing";
                         }
                     }
                     else // File path Missing 
                     {
                         iconObject[i].Visibility = Visibility.Visible;
                         iconObject[i].Source = new BitmapImage(new Uri(@"\Resources\Icon_Error.png", UriKind.RelativeOrAbsolute));
-                    }
 
-                    // name
-                    NameObject[i].Visibility = Visibility.Visible;
-                    NameObject[i].Content = VO.name[i];
+                        NameObject[i].Visibility = Visibility.Visible;
+                        NameObject[i].Content = "FilePathMissing";
+                    }
                 }
 
             }

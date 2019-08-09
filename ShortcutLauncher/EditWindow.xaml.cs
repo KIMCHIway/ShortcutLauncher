@@ -59,8 +59,16 @@ namespace ShortcutLauncher
         private void IconPathBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             string path = GetName_FileExplorer();
+            string format = path.Split('.').Last();
 
-            iconPathBlock.Text = path;
+            if (format == "png" || format == "jpg" || format == "jpeg" || format == "ico")
+            {
+                iconPathBlock.Text = path;
+            }
+            else
+            {
+                MessageBox.Show("잘못된 아이콘 형식입니다", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void PathCheckBox_Checked(object sender, RoutedEventArgs e)
