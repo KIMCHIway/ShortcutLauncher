@@ -110,7 +110,7 @@ namespace ShortcutLauncher
             InitializeComponent();
             Init_iconObjects();
 
-            //Register_StartProcess();
+            Register_StartProcess();
 
             //Save_Data();
             Load_Data();
