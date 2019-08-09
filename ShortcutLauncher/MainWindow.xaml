@@ -30,22 +30,22 @@
         <Image x:Name="icon14" HorizontalAlignment="Left" Height="54" Margin="167,285,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon14_MouseLeftButtonDown"/>
         <Image x:Name="icon15" HorizontalAlignment="Left" Height="54" Margin="243,285,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon15_MouseLeftButtonDown"/>
 
-        <Image x:Name="delete00" HorizontalAlignment="Left" Height="22" Margin="58,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete00_MouseLeftButtonDown"/>
-        <Image x:Name="delete01" HorizontalAlignment="Left" Height="22" Margin="134,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete01_MouseLeftButtonDown"/>
-        <Image x:Name="delete02" HorizontalAlignment="Left" Height="22" Margin="211,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete02_MouseLeftButtonDown"/>
-        <Image x:Name="delete03" HorizontalAlignment="Left" Height="22" Margin="287,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete03_MouseLeftButtonDown"/>
-        <Image x:Name="delete04" HorizontalAlignment="Left" Height="22" Margin="58,103,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete04_MouseLeftButtonDown"/>
-        <Image x:Name="delete05" HorizontalAlignment="Left" Height="22" Margin="134,103,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete05_MouseLeftButtonDown"/>
-        <Image x:Name="delete06" HorizontalAlignment="Left" Height="22" Margin="211,103,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete06_MouseLeftButtonDown"/>
-        <Image x:Name="delete07" HorizontalAlignment="Left" Height="22" Margin="287,103,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete07_MouseLeftButtonDown"/>
-        <Image x:Name="delete08" HorizontalAlignment="Left" Height="22" Margin="58,188,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete08_MouseLeftButtonDown"/>
-        <Image x:Name="delete09" HorizontalAlignment="Left" Height="22" Margin="134,188,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete09_MouseLeftButtonDown"/>
-        <Image x:Name="delete10" HorizontalAlignment="Left" Height="22" Margin="211,188,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete10_MouseLeftButtonDown"/>
-        <Image x:Name="delete11" HorizontalAlignment="Left" Height="22" Margin="287,188,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete11_MouseLeftButtonDown"/>
-        <Image x:Name="delete12" HorizontalAlignment="Left" Height="22" Margin="58,274,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete12_MouseLeftButtonDown"/>
-        <Image x:Name="delete13" HorizontalAlignment="Left" Height="22" Margin="134,274,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete13_MouseLeftButtonDown"/>
-        <Image x:Name="delete14" HorizontalAlignment="Left" Height="22" Margin="211,274,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete14_MouseLeftButtonDown"/>
-        <Image x:Name="delete15" HorizontalAlignment="Left" Height="22" Margin="287,274,0,0" VerticalAlignment="Top" Width="22" Source="Resources/delete.png" MouseLeftButtonDown="Delete15_MouseLeftButtonDown"/>
+        <Image x:Name="delete00" HorizontalAlignment="Left" Height="22" Margin="58,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete00_MouseLeftButtonDown"/>
+        <Image x:Name="delete01" HorizontalAlignment="Left" Height="22" Margin="134,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete01_MouseLeftButtonDown"/>
+        <Image x:Name="delete02" HorizontalAlignment="Left" Height="22" Margin="211,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete02_MouseLeftButtonDown"/>
+        <Image x:Name="delete03" HorizontalAlignment="Left" Height="22" Margin="287,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete03_MouseLeftButtonDown"/>
+        <Image x:Name="delete04" HorizontalAlignment="Left" Height="22" Margin="58,103,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete04_MouseLeftButtonDown"/>
+        <Image x:Name="delete05" HorizontalAlignment="Left" Height="22" Margin="134,103,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete05_MouseLeftButtonDown"/>
+        <Image x:Name="delete06" HorizontalAlignment="Left" Height="22" Margin="211,103,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete06_MouseLeftButtonDown"/>
+        <Image x:Name="delete07" HorizontalAlignment="Left" Height="22" Margin="287,103,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete07_MouseLeftButtonDown"/>
+        <Image x:Name="delete08" HorizontalAlignment="Left" Height="22" Margin="58,188,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete08_MouseLeftButtonDown"/>
+        <Image x:Name="delete09" HorizontalAlignment="Left" Height="22" Margin="134,188,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete09_MouseLeftButtonDown"/>
+        <Image x:Name="delete10" HorizontalAlignment="Left" Height="22" Margin="211,188,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete10_MouseLeftButtonDown"/>
+        <Image x:Name="delete11" HorizontalAlignment="Left" Height="22" Margin="287,188,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete11_MouseLeftButtonDown"/>
+        <Image x:Name="delete12" HorizontalAlignment="Left" Height="22" Margin="58,274,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete12_MouseLeftButtonDown"/>
+        <Image x:Name="delete13" HorizontalAlignment="Left" Height="22" Margin="134,274,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete13_MouseLeftButtonDown"/>
+        <Image x:Name="delete14" HorizontalAlignment="Left" Height="22" Margin="211,274,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete14_MouseLeftButtonDown"/>
+        <Image x:Name="delete15" HorizontalAlignment="Left" Height="22" Margin="287,274,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete15_MouseLeftButtonDown"/>
 
         <Label x:Name="name00" Content="Label" HorizontalAlignment="Left" Margin="9,84,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
         <Label x:Name="name01" Content="Label" HorizontalAlignment="Left" Margin="85,84,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
