@@ -107,13 +107,13 @@
     <None Include="Resources\cs.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Icon_Plus.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Icon_Error.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Icon_Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon_Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon_Plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
