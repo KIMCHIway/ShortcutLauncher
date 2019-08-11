@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MessageBox = System.Windows.Forms.MessageBox;
+using MessageBox = System.Windows.MessageBox;
 using Label = System.Windows.Controls.Label;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;

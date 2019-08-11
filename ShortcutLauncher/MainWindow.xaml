@@ -5,64 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShortcutLauncher"
         mc:Ignorable="d"
-        Title="MainWindow" Height="389.017" Width="324" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" >
+        Title="MainWindow" Height="477.017" Width="359" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" >
     <Grid Margin="0,0,0,2">
-        <Rectangle x:Name="Border" HorizontalAlignment="Left" Height="389" Width="324" Margin="0,-2,0,0" Stroke="White" VerticalAlignment="Top" StrokeThickness="5" Visibility="Hidden"/>
-        <Rectangle x:Name="BorderRect1" HorizontalAlignment="Left" Height="15" Width="15" Margin="0,370,0,0" StrokeThickness="5" VerticalAlignment="Top" Fill="White" Visibility="Hidden"/>
-        <Rectangle x:Name="BorderRect2" HorizontalAlignment="Left" Height="15" Width="15" Margin="309,-2,0,0" StrokeThickness="5" VerticalAlignment="Top" Fill="White" Visibility="Hidden"/>
-        <Rectangle x:Name="BorderRect3" HorizontalAlignment="Left" Height="15" Width="15" Margin="0,-2,0,0" StrokeThickness="5" VerticalAlignment="Top" Fill="White" Visibility="Hidden"/>
-        <Rectangle x:Name="BorderRect4" HorizontalAlignment="Left" Height="15" Width="15" Margin="309,372,0,0" StrokeThickness="5" VerticalAlignment="Top" Fill="White" Visibility="Hidden"/>
+        <Rectangle x:Name="Border" HorizontalAlignment="Left" Height="477" Width="359" Margin="0,-2,0,0" Stroke="White" VerticalAlignment="Top" StrokeThickness="5" Visibility="Hidden"/>
+        <Rectangle x:Name="BorderRect1" HorizontalAlignment="Left" Height="20" Width="20" Margin="0,455,0,0" StrokeThickness="5" VerticalAlignment="Top" Fill="White" Visibility="Hidden"/>
+        <Rectangle x:Name="BorderRect2" HorizontalAlignment="Left" Height="20" Width="20" Margin="339,-2,0,0" StrokeThickness="5" VerticalAlignment="Top" Fill="White" Visibility="Hidden"/>
+        <Rectangle x:Name="BorderRect3" HorizontalAlignment="Left" Height="20" Width="20" Margin="0,-2,0,0" StrokeThickness="5" VerticalAlignment="Top" Fill="White" Visibility="Hidden"/>
+        <Rectangle x:Name="BorderRect4" HorizontalAlignment="Left" Height="20" Width="20" Margin="339,455,0,0" StrokeThickness="5" VerticalAlignment="Top" Fill="White" Visibility="Hidden"/>
 
-        <Image x:Name="icon00" HorizontalAlignment="Left" Height="55" Margin="14,29,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon00_MouseLeftButtonDown"/>
-        <Image x:Name="icon01" HorizontalAlignment="Left" Height="55" Margin="90,29,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon01_MouseLeftButtonDown"/>
-        <Image x:Name="icon02" HorizontalAlignment="Left" Height="55" Margin="167,29,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon02_MouseLeftButtonDown"/>
-        <Image x:Name="icon03" HorizontalAlignment="Left" Height="55" Margin="243,29,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon03_MouseLeftButtonDown"/>
-        <Image x:Name="icon04" HorizontalAlignment="Left" Height="55" Margin="14,114,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon04_MouseLeftButtonDown"/>
-        <Image x:Name="icon05" HorizontalAlignment="Left" Height="55" Margin="90,114,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon05_MouseLeftButtonDown"/>
-        <Image x:Name="icon06" HorizontalAlignment="Left" Height="55" Margin="167,114,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon06_MouseLeftButtonDown"/>
-        <Image x:Name="icon07" HorizontalAlignment="Left" Height="55" Margin="243,114,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon07_MouseLeftButtonDown"/>
-        <Image x:Name="icon08" HorizontalAlignment="Left" Height="55" Margin="14,199,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon08_MouseLeftButtonDown"/>
-        <Image x:Name="icon09" HorizontalAlignment="Left" Height="55" Margin="90,199,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon09_MouseLeftButtonDown"/>
-        <Image x:Name="icon10" HorizontalAlignment="Left" Height="55" Margin="167,199,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon10_MouseLeftButtonDown"/>
-        <Image x:Name="icon11" HorizontalAlignment="Left" Height="55" Margin="243,199,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon11_MouseLeftButtonDown"/>
-        <Image x:Name="icon12" HorizontalAlignment="Left" Height="54" Margin="14,285,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon12_MouseLeftButtonDown"/>
-        <Image x:Name="icon13" HorizontalAlignment="Left" Height="54" Margin="90,285,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon13_MouseLeftButtonDown"/>
-        <Image x:Name="icon14" HorizontalAlignment="Left" Height="54" Margin="167,285,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon14_MouseLeftButtonDown"/>
-        <Image x:Name="icon15" HorizontalAlignment="Left" Height="54" Margin="243,285,0,0" VerticalAlignment="Top" Width="55" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon15_MouseLeftButtonDown"/>
+        <Image x:Name="icon00" HorizontalAlignment="Left" Height="65" Margin="14,29,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon00_MouseLeftButtonDown"/>
+        <Image x:Name="icon01" HorizontalAlignment="Left" Height="65" Margin="99,29,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon01_MouseLeftButtonDown"/>
+        <Image x:Name="icon02" HorizontalAlignment="Left" Height="65" Margin="184,29,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon02_MouseLeftButtonDown"/>
+        <Image x:Name="icon03" HorizontalAlignment="Left" Height="65" Margin="269,29,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon03_MouseLeftButtonDown"/>
+        <Image x:Name="icon04" HorizontalAlignment="Left" Height="65" Margin="14,139,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon04_MouseLeftButtonDown"/>
+        <Image x:Name="icon05" HorizontalAlignment="Left" Height="65" Margin="99,139,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon05_MouseLeftButtonDown"/>
+        <Image x:Name="icon06" HorizontalAlignment="Left" Height="65" Margin="184,139,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon06_MouseLeftButtonDown"/>
+        <Image x:Name="icon07" HorizontalAlignment="Left" Height="65" Margin="269,138,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon07_MouseLeftButtonDown"/>
+        <Image x:Name="icon08" HorizontalAlignment="Left" Height="65" Margin="14,249,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon08_MouseLeftButtonDown"/>
+        <Image x:Name="icon09" HorizontalAlignment="Left" Height="65" Margin="99,249,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon09_MouseLeftButtonDown"/>
+        <Image x:Name="icon10" HorizontalAlignment="Left" Height="65" Margin="184,249,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon10_MouseLeftButtonDown"/>
+        <Image x:Name="icon11" HorizontalAlignment="Left" Height="65" Margin="269,249,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon11_MouseLeftButtonDown"/>
+        <Image x:Name="icon12" HorizontalAlignment="Left" Height="65" Margin="14,359,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon12_MouseLeftButtonDown"/>
+        <Image x:Name="icon13" HorizontalAlignment="Left" Height="65" Margin="99,359,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon13_MouseLeftButtonDown"/>
+        <Image x:Name="icon14" HorizontalAlignment="Left" Height="65" Margin="184,359,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon14_MouseLeftButtonDown"/>
+        <Image x:Name="icon15" HorizontalAlignment="Left" Height="65" Margin="269,359,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon15_MouseLeftButtonDown"/>
 
-        <Image x:Name="delete00" HorizontalAlignment="Left" Height="22" Margin="58,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete00_MouseLeftButtonDown"/>
-        <Image x:Name="delete01" HorizontalAlignment="Left" Height="22" Margin="134,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete01_MouseLeftButtonDown"/>
-        <Image x:Name="delete02" HorizontalAlignment="Left" Height="22" Margin="211,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete02_MouseLeftButtonDown"/>
-        <Image x:Name="delete03" HorizontalAlignment="Left" Height="22" Margin="287,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete03_MouseLeftButtonDown"/>
-        <Image x:Name="delete04" HorizontalAlignment="Left" Height="22" Margin="58,103,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete04_MouseLeftButtonDown"/>
-        <Image x:Name="delete05" HorizontalAlignment="Left" Height="22" Margin="134,103,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete05_MouseLeftButtonDown"/>
-        <Image x:Name="delete06" HorizontalAlignment="Left" Height="22" Margin="211,103,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete06_MouseLeftButtonDown"/>
-        <Image x:Name="delete07" HorizontalAlignment="Left" Height="22" Margin="287,103,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete07_MouseLeftButtonDown"/>
-        <Image x:Name="delete08" HorizontalAlignment="Left" Height="22" Margin="58,188,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete08_MouseLeftButtonDown"/>
-        <Image x:Name="delete09" HorizontalAlignment="Left" Height="22" Margin="134,188,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete09_MouseLeftButtonDown"/>
-        <Image x:Name="delete10" HorizontalAlignment="Left" Height="22" Margin="211,188,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete10_MouseLeftButtonDown"/>
-        <Image x:Name="delete11" HorizontalAlignment="Left" Height="22" Margin="287,188,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete11_MouseLeftButtonDown"/>
-        <Image x:Name="delete12" HorizontalAlignment="Left" Height="22" Margin="58,274,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete12_MouseLeftButtonDown"/>
-        <Image x:Name="delete13" HorizontalAlignment="Left" Height="22" Margin="134,274,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete13_MouseLeftButtonDown"/>
-        <Image x:Name="delete14" HorizontalAlignment="Left" Height="22" Margin="211,274,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete14_MouseLeftButtonDown"/>
-        <Image x:Name="delete15" HorizontalAlignment="Left" Height="22" Margin="287,274,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete15_MouseLeftButtonDown"/>
+        <Image x:Name="delete00" HorizontalAlignment="Left" Height="22" Margin="68,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete00_MouseLeftButtonDown"/>
+        <Image x:Name="delete01" HorizontalAlignment="Left" Height="22" Margin="153,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete01_MouseLeftButtonDown"/>
+        <Image x:Name="delete02" HorizontalAlignment="Left" Height="22" Margin="238,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete02_MouseLeftButtonDown"/>
+        <Image x:Name="delete03" HorizontalAlignment="Left" Height="22" Margin="323,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete03_MouseLeftButtonDown"/>
+        <Image x:Name="delete04" HorizontalAlignment="Left" Height="22" Margin="68,129,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete04_MouseLeftButtonDown"/>
+        <Image x:Name="delete05" HorizontalAlignment="Left" Height="22" Margin="153,129,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete05_MouseLeftButtonDown"/>
+        <Image x:Name="delete06" HorizontalAlignment="Left" Height="22" Margin="238,129,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete06_MouseLeftButtonDown"/>
+        <Image x:Name="delete07" HorizontalAlignment="Left" Height="22" Margin="323,128,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete07_MouseLeftButtonDown"/>
+        <Image x:Name="delete08" HorizontalAlignment="Left" Height="22" Margin="68,238,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete08_MouseLeftButtonDown"/>
+        <Image x:Name="delete09" HorizontalAlignment="Left" Height="22" Margin="153,238,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete09_MouseLeftButtonDown"/>
+        <Image x:Name="delete10" HorizontalAlignment="Left" Height="22" Margin="238,238,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete10_MouseLeftButtonDown"/>
+        <Image x:Name="delete11" HorizontalAlignment="Left" Height="22" Margin="323,238,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete11_MouseLeftButtonDown"/>
+        <Image x:Name="delete12" HorizontalAlignment="Left" Height="22" Margin="68,347,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete12_MouseLeftButtonDown"/>
+        <Image x:Name="delete13" HorizontalAlignment="Left" Height="22" Margin="153,347,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete13_MouseLeftButtonDown"/>
+        <Image x:Name="delete14" HorizontalAlignment="Left" Height="22" Margin="238,347,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete14_MouseLeftButtonDown"/>
+        <Image x:Name="delete15" HorizontalAlignment="Left" Height="22" Margin="323,347,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete15_MouseLeftButtonDown"/>
 
-        <Label x:Name="name00" Content="Label" HorizontalAlignment="Left" Margin="9,84,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
-        <Label x:Name="name01" Content="Label" HorizontalAlignment="Left" Margin="85,84,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
-        <Label x:Name="name02" Content="Label" HorizontalAlignment="Left" Margin="162,84,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
-        <Label x:Name="name03" Content="Label" HorizontalAlignment="Left" Margin="238,84,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
-        <Label x:Name="name04" Content="Label" HorizontalAlignment="Left" Margin="9,169,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
-        <Label x:Name="name05" Content="Label" HorizontalAlignment="Left" Margin="85,169,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
-        <Label x:Name="name06" Content="Label" HorizontalAlignment="Left" Margin="162,169,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
-        <Label x:Name="name07" Content="Label" HorizontalAlignment="Left" Margin="238,169,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
-        <Label x:Name="name08" Content="Label" HorizontalAlignment="Left" Margin="9,254,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
-        <Label x:Name="name09" Content="Label" HorizontalAlignment="Left" Margin="85,254,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
-        <Label x:Name="name10" Content="Label" HorizontalAlignment="Left" Margin="162,254,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
-        <Label x:Name="name11" Content="Label" HorizontalAlignment="Left" Margin="238,254,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
-        <Label x:Name="name12" Content="Label" HorizontalAlignment="Left" Margin="9,339,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
-        <Label x:Name="name13" Content="Label" HorizontalAlignment="Left" Margin="85,339,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
-        <Label x:Name="name14" Content="Label" HorizontalAlignment="Left" Margin="162,339,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
-        <Label x:Name="name15" Content="Label" HorizontalAlignment="Left" Margin="238,339,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name00" Content="Label" HorizontalAlignment="Left" Margin="14,97,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name01" Content="Label" HorizontalAlignment="Left" Margin="99,97,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name02" Content="Label" HorizontalAlignment="Left" Margin="184,97,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name03" Content="Label" HorizontalAlignment="Left" Margin="269,97,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name04" Content="Label" HorizontalAlignment="Left" Margin="14,207,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name05" Content="Label" HorizontalAlignment="Left" Margin="99,207,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name06" Content="Label" HorizontalAlignment="Left" Margin="184,207,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name07" Content="Label" HorizontalAlignment="Left" Margin="269,206,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name08" Content="Label" HorizontalAlignment="Left" Margin="14,317,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name09" Content="Label" HorizontalAlignment="Left" Margin="99,317,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name10" Content="Label" HorizontalAlignment="Left" Margin="184,317,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name11" Content="Label" HorizontalAlignment="Left" Margin="269,317,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name12" Content="Label" HorizontalAlignment="Left" Margin="14,427,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name13" Content="Label" HorizontalAlignment="Left" Margin="99,427,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name14" Content="Label" HorizontalAlignment="Left" Margin="184,427,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
+        <Label x:Name="name15" Content="Label" HorizontalAlignment="Left" Margin="269,427,0,0" VerticalAlignment="Top" Foreground="White" Height="31" Width="65" HorizontalContentAlignment="Center" Padding="0,5"/>
 
 
     </Grid>
