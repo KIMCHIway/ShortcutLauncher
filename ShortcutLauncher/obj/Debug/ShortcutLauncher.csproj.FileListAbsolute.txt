@@ -14,3 +14,4 @@ E:\Visual Files\C#\ShortcutLauncher\ShortcutLauncher\obj\Debug\ShortcutLauncher.
 E:\Visual Files\C#\ShortcutLauncher\ShortcutLauncher\obj\Debug\ShortcutLauncher.csproj.CoreCompileInputs.cache
 E:\Visual Files\C#\ShortcutLauncher\ShortcutLauncher\obj\Debug\ShortcutLauncher.exe
 E:\Visual Files\C#\ShortcutLauncher\ShortcutLauncher\obj\Debug\ShortcutLauncher.pdb
+E:\Visual Files\C#\ShortcutLauncher\ShortcutLauncher\obj\Debug\ShortcutLauncher.csprojAssemblyReference.cache

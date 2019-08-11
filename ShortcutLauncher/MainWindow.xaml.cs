@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MessageBox = System.Windows.MessageBox;
+using MessageBox = System.Windows.Forms.MessageBox;
 using Label = System.Windows.Controls.Label;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -189,7 +189,7 @@ namespace ShortcutLauncher
                 menu.MenuItems.Add(item3);
                 menu.MenuItems.Add(item4);
 
-                tray.Icon = Properties.Resources.cs;
+                tray.Icon = Properties.Resources.logo;
                 tray.Visible = true;
                 tray.ContextMenu = menu;
                 tray.Text = "Shortcut_Launcher";
