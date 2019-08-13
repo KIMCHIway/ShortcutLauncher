@@ -107,19 +107,26 @@ namespace ShortcutLauncher
 
         public MainWindow()
         {
-            InitializeComponent();
-            Init_iconObjects();
+            try
+            {
+                InitializeComponent();
+                Init_iconObjects();
 
-            Register_StartProcess();
+                Register_StartProcess();
 
-            //Save_Data();
-            Load_Data();
+                //Save_Data();
+                Load_Data();
 
-            // Sync position
-            Left = VO.left;
-            Top = VO.top;
+                // Sync position
+                Left = VO.left;
+                Top = VO.top;
 
-            Refresh_Icon();
+                Refresh_Icon();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message + "\r Report Error", "Initialize ERROR");
+            }
 
             // Set tray function
             try
@@ -171,7 +178,7 @@ namespace ShortcutLauncher
 
                 item3.Index = 2;
                 item3.Text = "시작 프로그램 등록";
-                if (runRegKey.GetValue("Shortcut_Launcher") == null)
+                if (runRegKey.GetValue("ShortcutLauncher") == null)
                 {
                     item3.Checked = false;
                 }
@@ -211,16 +218,16 @@ namespace ShortcutLauncher
 
         private void Register_StartProcess()
         {
-            if (runRegKey.GetValue("Shortcut_Launcher") == null)
+            if (runRegKey.GetValue("ShortcutLauncher") == null)
             {
-                runRegKey.SetValue("Shortcut_Launcher", Environment.CurrentDirectory + "\\" + AppDomain.CurrentDomain.FriendlyName);
+                runRegKey.SetValue("ShortcutLauncher", System.Windows.Forms.Application.StartupPath + "\\" + AppDomain.CurrentDomain.FriendlyName);
             }
         }
 
         private void Load_Data()
         {
             BinaryFormatter readFormatter = new BinaryFormatter();
-            FileStream readStream = new FileStream("data.dat", FileMode.Open, FileAccess.Read, FileShare.Read);
+            FileStream readStream = new FileStream(System.Windows.Forms.Application.StartupPath + "\\" + "data.dat", FileMode.Open, FileAccess.Read, FileShare.Read);
              VO = (ValueObject)readFormatter.Deserialize(readStream);
             readStream.Close();
         }
@@ -228,7 +235,7 @@ namespace ShortcutLauncher
         private void Save_Data()
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("data.dat", FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream stream = new FileStream(System.Windows.Forms.Application.StartupPath + "\\" + "data.dat", FileMode.Create, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, VO);
             stream.Close();
         }
