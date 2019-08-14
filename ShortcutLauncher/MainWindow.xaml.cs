@@ -20,6 +20,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Diagnostics;
 using Microsoft.Win32;
+using Cursors = System.Windows.Input.Cursors;
+using MouseEventArgs = System.Windows.Input.MouseEventArgs;
 
 namespace ShortcutLauncher
 {
@@ -46,6 +48,7 @@ namespace ShortcutLauncher
         private NotifyIcon tray = new NotifyIcon();
 
         private List<Image> iconObject = new List<Image>();
+        private List<Rectangle> areaObject = new List<Rectangle>();
         private List<Label> NameObject = new List<Label>();
         private List<Image> DeleteObject = new List<Image>();
         private void Init_iconObjects()
@@ -66,6 +69,23 @@ namespace ShortcutLauncher
             iconObject.Add(icon13);
             iconObject.Add(icon14);
             iconObject.Add(icon15);
+
+            areaObject.Add(area00);
+            areaObject.Add(area01);
+            areaObject.Add(area02);
+            areaObject.Add(area03);
+            areaObject.Add(area04);
+            areaObject.Add(area05);
+            areaObject.Add(area06);
+            areaObject.Add(area07);
+            areaObject.Add(area08);
+            areaObject.Add(area09);
+            areaObject.Add(area10);
+            areaObject.Add(area11);
+            areaObject.Add(area12);
+            areaObject.Add(area13);
+            areaObject.Add(area14);
+            areaObject.Add(area15);
 
             NameObject.Add(name00);
             NameObject.Add(name01);
@@ -216,6 +236,22 @@ namespace ShortcutLauncher
             if(movement) DragMove();
         }
 
+        private void Icon_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Cursor != Cursors.Wait)
+            {
+                Cursor = Cursors.Hand;
+            }
+        }
+
+        private void Icon_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (Cursor != Cursors.Wait)
+            {
+                Cursor = Cursors.Arrow;
+            }
+        }
+
         private void Register_StartProcess()
         {
             if (runRegKey.GetValue("ShortcutLauncher") == null)
@@ -251,6 +287,8 @@ namespace ShortcutLauncher
                 {
                     // icon
                     iconObject[i].Visibility = Visibility.Hidden;
+                    // Hit area
+                    areaObject[i].Visibility = Visibility.Hidden;
                     // name
                     NameObject[i].Visibility = Visibility.Hidden;
                 }
@@ -265,6 +303,8 @@ namespace ShortcutLauncher
                             iconObject[i].Visibility = Visibility.Visible;
                             iconObject[i].Source = new BitmapImage(new Uri(VO.iconPath[i], UriKind.RelativeOrAbsolute));
 
+                            areaObject[i].Visibility = Visibility.Visible;
+
                             NameObject[i].Visibility = Visibility.Visible;
                             NameObject[i].Content = VO.name[i];
                         }
@@ -272,6 +312,8 @@ namespace ShortcutLauncher
                         {
                             iconObject[i].Visibility = Visibility.Visible;
                             iconObject[i].Source = new BitmapImage(new Uri(@"\Resources\Icon_Error.png", UriKind.RelativeOrAbsolute));
+
+                            areaObject[i].Visibility = Visibility.Hidden;
 
                             NameObject[i].Visibility = Visibility.Visible;
                             NameObject[i].Content = "IconFilePathMissing";
@@ -281,6 +323,8 @@ namespace ShortcutLauncher
                     {
                         iconObject[i].Visibility = Visibility.Visible;
                         iconObject[i].Source = new BitmapImage(new Uri(@"\Resources\Icon_Error.png", UriKind.RelativeOrAbsolute));
+
+                        areaObject[i].Visibility = Visibility.Hidden;
 
                         NameObject[i].Visibility = Visibility.Visible;
                         NameObject[i].Content = "FilePathMissing";
@@ -305,6 +349,8 @@ namespace ShortcutLauncher
                     // Apply Addition icon
                     iconObject[i].Visibility = Visibility.Visible;
                     iconObject[i].Source = new BitmapImage(new Uri(@"\Resources\Icon_Plus.png", UriKind.RelativeOrAbsolute));
+
+                    areaObject[i].Visibility = Visibility.Visible;
                 }
             }
 

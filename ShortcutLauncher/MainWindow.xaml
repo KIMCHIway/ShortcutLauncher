@@ -13,22 +13,104 @@
         <Rectangle x:Name="BorderRect3" HorizontalAlignment="Left" Height="20" Width="20" Margin="0,-2,0,0" StrokeThickness="5" VerticalAlignment="Top" Fill="White" Visibility="Hidden"/>
         <Rectangle x:Name="BorderRect4" HorizontalAlignment="Left" Height="20" Width="20" Margin="339,455,0,0" StrokeThickness="5" VerticalAlignment="Top" Fill="White" Visibility="Hidden"/>
 
-        <Image x:Name="icon00" HorizontalAlignment="Left" Height="65" Margin="14,29,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon00_MouseLeftButtonDown"/>
-        <Image x:Name="icon01" HorizontalAlignment="Left" Height="65" Margin="99,29,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon01_MouseLeftButtonDown"/>
-        <Image x:Name="icon02" HorizontalAlignment="Left" Height="65" Margin="184,29,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon02_MouseLeftButtonDown"/>
-        <Image x:Name="icon03" HorizontalAlignment="Left" Height="65" Margin="269,29,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon03_MouseLeftButtonDown"/>
-        <Image x:Name="icon04" HorizontalAlignment="Left" Height="65" Margin="14,139,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon04_MouseLeftButtonDown"/>
-        <Image x:Name="icon05" HorizontalAlignment="Left" Height="65" Margin="99,139,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon05_MouseLeftButtonDown"/>
-        <Image x:Name="icon06" HorizontalAlignment="Left" Height="65" Margin="184,139,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon06_MouseLeftButtonDown"/>
-        <Image x:Name="icon07" HorizontalAlignment="Left" Height="65" Margin="269,138,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon07_MouseLeftButtonDown"/>
-        <Image x:Name="icon08" HorizontalAlignment="Left" Height="65" Margin="14,249,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon08_MouseLeftButtonDown"/>
-        <Image x:Name="icon09" HorizontalAlignment="Left" Height="65" Margin="99,249,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon09_MouseLeftButtonDown"/>
-        <Image x:Name="icon10" HorizontalAlignment="Left" Height="65" Margin="184,249,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon10_MouseLeftButtonDown"/>
-        <Image x:Name="icon11" HorizontalAlignment="Left" Height="65" Margin="269,249,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon11_MouseLeftButtonDown"/>
-        <Image x:Name="icon12" HorizontalAlignment="Left" Height="65" Margin="14,359,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon12_MouseLeftButtonDown"/>
-        <Image x:Name="icon13" HorizontalAlignment="Left" Height="65" Margin="99,359,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon13_MouseLeftButtonDown"/>
-        <Image x:Name="icon14" HorizontalAlignment="Left" Height="65" Margin="184,359,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon14_MouseLeftButtonDown"/>
-        <Image x:Name="icon15" HorizontalAlignment="Left" Height="65" Margin="269,359,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality" MouseLeftButtonDown="Icon15_MouseLeftButtonDown"/>
+
+        <Image x:Name="icon00" HorizontalAlignment="Left" Height="65" Margin="14,29,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image x:Name="icon01" HorizontalAlignment="Left" Height="65" Margin="99,29,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image x:Name="icon02" HorizontalAlignment="Left" Height="65" Margin="184,29,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image x:Name="icon03" HorizontalAlignment="Left" Height="65" Margin="269,29,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image x:Name="icon04" HorizontalAlignment="Left" Height="65" Margin="14,139,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image x:Name="icon05" HorizontalAlignment="Left" Height="65" Margin="99,139,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image x:Name="icon06" HorizontalAlignment="Left" Height="65" Margin="184,139,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image x:Name="icon07" HorizontalAlignment="Left" Height="65" Margin="269,138,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image x:Name="icon08" HorizontalAlignment="Left" Height="65" Margin="14,249,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image x:Name="icon09" HorizontalAlignment="Left" Height="65" Margin="99,249,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image x:Name="icon10" HorizontalAlignment="Left" Height="65" Margin="184,249,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image x:Name="icon11" HorizontalAlignment="Left" Height="65" Margin="269,249,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image x:Name="icon12" HorizontalAlignment="Left" Height="65" Margin="14,359,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image x:Name="icon13" HorizontalAlignment="Left" Height="65" Margin="99,359,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image x:Name="icon14" HorizontalAlignment="Left" Height="65" Margin="184,359,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image x:Name="icon15" HorizontalAlignment="Left" Height="65" Margin="269,359,0,0" VerticalAlignment="Top" Width="65" RenderOptions.BitmapScalingMode="HighQuality"/>
+
+        <Rectangle x:Name="area00" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="14,29,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon00_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="area01" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="99,29,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon01_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="area02" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="184,29,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon02_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="area03" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="269,29,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon03_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="area04" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="14,139,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon04_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="area05" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="99,139,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon05_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="area06" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="184,139,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon06_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="area07" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="269,138,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon07_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="area08" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="14,249,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon08_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="area09" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="99,249,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon09_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="area10" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="184,249,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon10_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="area11" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="269,249,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon11_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="area12" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="14,359,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon12_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="area13" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="99,359,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon13_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="area14" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="184,359,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon14_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="area15" Visibility="Hidden" HorizontalAlignment="Left" Height="65" Margin="269,359,0,0" VerticalAlignment="Top" Width="65" MouseEnter="Icon_MouseEnter" MouseLeave="Icon_MouseLeave" MouseLeftButtonDown="Icon15_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.01"/>
+            </Rectangle.Fill>
+        </Rectangle>
 
         <Image x:Name="delete00" HorizontalAlignment="Left" Height="22" Margin="68,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete00_MouseLeftButtonDown"/>
         <Image x:Name="delete01" HorizontalAlignment="Left" Height="22" Margin="153,18,0,0" VerticalAlignment="Top" Width="22" Source="Resources/Icon_Delete.png" MouseLeftButtonDown="Delete01_MouseLeftButtonDown"/>
